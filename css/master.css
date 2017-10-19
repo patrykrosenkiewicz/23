@@ -195,6 +195,8 @@ font-family: 'Lato', sans-serif;
   .block-two-img{
     position: absolute;
     left: .7rem;
+    height: 52px;
+    max-width: 72px;
   }
 
 
@@ -430,6 +432,25 @@ footer{
 }
 
 }
+
+@media (min-width: 900px) {
+
+
+  .contacts-container{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contacts-container::after{
+    display: block;
+    content: "";
+    clear: both;
+  }
+  .contacts-details{
+    float: left;
+  }
+}
+
 @media (min-width: 1200px) {
   .logo-element{
     float: left;
@@ -482,6 +503,22 @@ nav::after{
     padding-left: 2vw;
   }
 
+  .description-item-first{
+    font-size: 3rem;
+  }
+
+  .description-item-second{
+    font-size: 3.5rem;
+  }
+
+  .description-item-third{
+    font-size: 2.5rem;
+  }
+
+  .description-item-forth{
+    font-size: 2rem;
+  }
+
   .dancer{
     display: block;
     float: right;
@@ -510,17 +547,30 @@ nav::after{
   .block-left-first{
     margin-top: 2.875rem;
   }
-  .block-one::after{
-    display: block;
-    content: '';
-    clear: both;
-  }
+.block-left{
+  margin-left: 15vw;
+}
+.block-right{
+  margin-right: 15vw;
+}
 
   .block-two-element{
     float: left;
     display: inline-block;
     max-width: 20vw;
-    padding-top: 50px;  
+    padding-top: 50px;
+  }
+
+  .block-two-element-container{
+    max-width: 90vw;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .block-two-element-container::after{
+    display: block;
+    content: '';
+    clear: both;
   }
 
 
@@ -533,12 +583,6 @@ nav::after{
     position: relative;
     bottom: -15px;
     right: 20px;
-  }
-
-  .block-two-element::after{
-    display: table;
-    content: '';
-    clear: both;
   }
 
   .portfolio{
@@ -560,6 +604,17 @@ nav::after{
       content: "";
       clear: both;
     }
+    .client{
+      position: relative;
+    }
+
+    .wrapper{
+      min-width: 70vw;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
     .client-logos{
       text-align: center;
@@ -568,42 +623,37 @@ nav::after{
       display: inline-block;
     }
 
-
-
-
     .client-logos::after{
       display: block;
       content: "";
       clear: both;
     }
 
+    .blog{
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .blog-left{
+      display: inline-block;
+      max-width: 30vw;
+      margin-right: .5rem;
+    }
 
 
+    .blog-right{
+      display: inline-block;
+      max-width: 30vw;
+    }
+
+    footer{
+      min-height: 100vh;
+    }
 
 
 }
 
-@media (min-width: 900px) {
-
-
-  .contacts-container{
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .contacts-container::after{
-    display: block;
-    content: "";
-    clear: both;
-  }
-  .contacts-details{
-    float: left;
-  }
-}
-
-
-
-@media (min-height: 600px) {
+@media (max-height: 600px) {
   .description{
     margin-top: 5vh;
   }
